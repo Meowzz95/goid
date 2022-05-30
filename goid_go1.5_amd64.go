@@ -20,4 +20,4 @@
 
 package goid
 
-func Get() int64
+func Goid() int64

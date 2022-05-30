@@ -24,7 +24,7 @@ func TestGet(t *testing.T) {
 	ch := make(chan *string, 100)
 	for i := 0; i < cap(ch); i++ {
 		go func(i int) {
-			goid := Get()
+			goid := Goid()
 			expected := getSlow()
 			if goid == expected {
 				ch <- nil
@@ -45,6 +45,6 @@ func TestGet(t *testing.T) {
 
 func BenchmarkGet(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		Get()
+		Goid()
 	}
 }

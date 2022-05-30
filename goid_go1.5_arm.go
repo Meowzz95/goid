@@ -23,6 +23,6 @@ package goid
 // Backdoor access to runtime·getg().
 func getg() *g // in goid_go1.5_arm.s or goid_go1.5_arm64.s
 
-func Get() int64 {
+func Goid() int64 {
 	return getg().goid
 }
